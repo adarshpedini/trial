@@ -1,0 +1,8 @@
+docker build -t adarsh .                   
+
+docker run -d -p 5000:5000 --name Dockerdemo adarsh
+docker ps -a 
+
+build docker img>run>check
+
+foler->py>doclerfile>cmds
