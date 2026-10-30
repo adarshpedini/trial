@@ -1,0 +1,29 @@
+hellosvc
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellosvc
+spec:
+  type: NodePort
+  selector:
+    run: hellopy
+  ports:
+    - port: 30001
+      targetPort: 30001
+      nodePort: 30001
+
+pod
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellopy
+  labels:
+    run: hellopy
+spec:
+  containers:
+    - name: hellopy
+      image: pratyush1210/hellopy:0.1
+      ports:
+        - containerPort: 30001
