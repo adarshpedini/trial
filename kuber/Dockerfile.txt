@@ -6,7 +6,7 @@ COPY . .
 EXPOSE 30001
 CMD ["python", "main.py"]
 
-
+-----
 docker --version
 docker info
 dir
@@ -43,8 +43,13 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=30001)
     
 -----
+flask
+-----
+
+Open Docker Desktop → Open project in VS Code → Create Dockerfile → Create requirements.txt → 
+Build image (docker build -t myapp .) → Push image to Docker Hub → Create pod.yaml → Apply Pod (kubectl apply -f pod.yaml) → 
+Check Pod (kubectl get pods) → Create hellosvc.yaml → Apply Service (kubectl apply -f hellosvc.yaml) → Check Service (kubectl get svc).
+
+----
 
 
-
-
-    
